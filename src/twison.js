@@ -52,7 +52,8 @@ window.onload = function() {
 
 		convert: function() {
 			var passages = document.getElementsByTagName("tw-passagedata");
-	    return Array.prototype.slice.call(passages).map(Twison.convertPassage);
+	    var objects = Array.prototype.slice.call(passages).map(Twison.convertPassage);
+      return JSON.stringify(objects, null, 2);
     }
   }
   document.getElementById("output").innerHTML = Twison.convert()
