@@ -4,6 +4,15 @@ Twison is a story format for [Twine 2](http://twinery.org/2) that simply exports
 
 It is inspired by [http://www.maximumverbosity.net/twine/Entweedle/](Entweedle) as a model for how Twine 2 story formats work.
 
+## Installation
+
+From the Twine 2 story select screen, add a story format, and point it to the url `http://github.com/lazerwalker/twison/raw/master/dist/format.js`.
+
+From within your story, set its story format to Twison. Choosing "Play" will now give you a JSON file.
+
+
+## Output
+
 Here's an exampe of its output:
 
 ```json
@@ -49,13 +58,6 @@ Here's an exampe of its output:
 ```
 
 It aims to maintain all fields provided in Twine's internal XML data, while augmenting with other information where possible. For example, it doesn't touch a node's text contents, but it does parse links to provide a dictionary of links and destination nodes.
-
-
-## Installation
-
-From the Twine 2 story select screen, add a story format, and point it to the url `http://github.com/lazerwalker/twison/raw/master/dist/format.js`.
-
-From within your story, set its story format to Twison. Choosing "Play" will now give you a JSON file.
 
 
 ## Development
