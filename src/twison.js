@@ -26,7 +26,7 @@ window.onload = function() {
   	convertPassage: function(passage) {
 	  	var dict = {text: passage.innerHTML};
 
-      var links = this.extractLinksFromText(dict.text);
+      var links = Twison.extractLinksFromText(dict.text);
       if (links) {
         dict.links = links;
       }
@@ -52,7 +52,7 @@ window.onload = function() {
 
 		convert: function() {
 			var passages = document.getElementsByTagName("tw-passagedata");
-	    return Array.prototype.slice.call(passages).map(this.convertPassage);
+	    return Array.prototype.slice.call(passages).map(Twison.convertPassage);
     }
   }
   document.getElementById("output").innerHTML = Twison.convert()
