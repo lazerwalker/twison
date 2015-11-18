@@ -53,7 +53,7 @@ It aims to maintain all fields provided in Twine's internal XML data, while augm
 
 ## Installation
 
-From the Twine 2 story select screen, add a story format, and point it to the url `http://github.com/lazerwalker/twison/raw/master/format.js`.
+From the Twine 2 story select screen, add a story format, and point it to the url `http://github.com/lazerwalker/twison/raw/master/dist/format.js`.
 
 From within your story, set its story format to Twison. Choosing "Play" will now give you a JSON file.
 

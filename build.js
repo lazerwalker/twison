@@ -19,10 +19,10 @@ var outputJSON = {
 };
 
 var outputString = "window.storyFormat(" + JSON.stringify(outputJSON, null, 2) + ");";
-fs.writeFile("format.js", outputString, function(err) {
+fs.writeFile("dist/format.js", outputString, function(err) {
   if (err) { 
     console.log("Error building story format:", err);
   } else {
-    console.log("Successfully built story format to format.js");
+    console.log("Successfully built story format to dist/format.js");
   }
 });
