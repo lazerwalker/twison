@@ -30,7 +30,7 @@ Here's an exampe of its output:
     ],
     "name": "First passage",
     "pid": "1",
-    "tags": "tag",
+    "tags": ["tag"],
     "position": {
       "x": "553.3333333333334",
       "y": "38.333333333333336"

@@ -31,20 +31,23 @@ window.onload = function() {
         dict.links = links;
       }
 
-      ["name", "pid", "tags"].forEach(function(attr) {
+      ["name", "pid", "position", "tags"].forEach(function(attr) {
         var value = passage.attributes[attr].value;
         if (value) {
           dict[attr] = value;
         }
       });
 
-      var position = passage.attributes.position.value;
-      if (position) {
-        position = position.split(',')
+      if(dict.position) {
+        var position = dict.position.split(',')
         dict.position = {
           x: position[0],
           y: position[1]
         }
+      }
+
+      if (dict.tags) {
+        dict.tags = dict.tags.split(" ");
       }
 
       return dict;
