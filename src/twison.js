@@ -53,10 +53,28 @@ window.onload = function() {
       return dict;
 		},
 
+    convertStory: function(story) {
+      var passages = story.getElementsByTagName("tw-passagedata");
+      var convertedPassages = Array.prototype.slice.call(passages).map(Twison.convertPassage);
+
+      var dict = {
+        passages: convertedPassages
+      };
+
+      ["name", "startnode", "creator", "creator-version", "ifid"].forEach(function(attr) {
+        var value = story.attributes[attr].value;
+        if (value) {
+          dict[attr] = value;
+        }
+      });
+
+      return dict;
+    },
+
 		convert: function() {
-			var passages = document.getElementsByTagName("tw-passagedata");
-	    var objects = Array.prototype.slice.call(passages).map(Twison.convertPassage);
-      return JSON.stringify(objects, null, 2);
+      var story = document.getElementsByTagName("tw-storydata")[0];
+      var convertedStory = Twison.convertStory(story);
+      return JSON.stringify(convertedStory, null, 2);
     }
   }
   document.getElementById("output").innerHTML = Twison.convert()
