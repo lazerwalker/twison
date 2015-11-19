@@ -78,7 +78,15 @@ It aims to maintain all fields provided in Twine's internal XML data, while augm
 
 ## Development
 
-If you want to hack on Twison itself, clone this repo. The code itself lives in `src`; you can compile it down to the story format Twine expects by running `node build.js` from the root project directory (you'll need to `npm install` first).
+If you want to hack on Twison itself:
+
+1. Clone this repo.
+2. run `npm install` to install dependencies.
+3. Make your changes (the unminified code lives the `src` folder), and then run `node build.js` from the root project directory to compile it down to a Twine 2-compatible `format.js` file.
+
+I have yet to figure out a way to test out changes to your story format from within Twine 2 itself other than pushing your changes to a remote sever. If you can figure out how to serve Twine 2 the format.js file from your local hard drive, I'd love to hear it.
+
+All contributions are welcome! If making code changes, please be sure to run the test suite (`npm test`) before opening a pull request.
 
 
 ## License
