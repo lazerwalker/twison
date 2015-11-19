@@ -67,6 +67,19 @@ var Twison = {
       }
     });
 
+    // Add PIDs to links
+    var pidsByName = {};
+    dict.passages.forEach(function(passage) {
+      pidsByName[passage.name] = passage.pid;
+    });
+
+    dict.passages.forEach(function(passage) {
+      if (!passage.links) return;
+      passage.links.forEach(function(link) {
+        link.pid = pidsByName[link.link];
+      });
+    });
+
     return dict;
   },
 

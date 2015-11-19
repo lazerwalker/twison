@@ -5,19 +5,23 @@
       "links": [
         {
           "name": "No Where",
-          "link": "nowhere"
+          "link": "nowhere",
+          "pid": "3"
         },
         {
           "name": "somewhere",
-          "link": "somewhere"
+          "link": "somewhere",
+          "pid": "2"
         },
         {
           "name": "third link",
-          "link": "third link"
+          "link": "third link",
+          "pid": "4"
         },
         {
           "name": "me",
-          "link": "someNode"
+          "link": "someNode",
+          "pid": "5"
         }
       ],
       "name": "First passage",
