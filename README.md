@@ -80,15 +80,14 @@ It aims to maintain all fields provided in Twine's internal XML data, while augm
 
 If you want to hack on Twison itself:
 
-1. Clone this repo.
-2. Run `npm install` to install dependencies.
-3. Make your changes to the unminified code in the `src` folder
-4. Run `node build.js` to compile your source into a `format.js` file that Twine 2 can understand.
+1. Clone this repo and run `npm install` to install dependencies.
+2. Make your changes to the unminified code in the `src` folder
+3. Run `node build.js` to compile your source into a `format.js` file that Twine 2 can understand. Alternatively, you can run `node watch.js` to watch the `src` directory for changes and auto-recompile every time you save.
 
 
 ### Testing your changes locally
 
-Running `npm start` will start a local web server that serves the compiled `format.js` file. By default, this will be available at `http://localhost:3000/format.js`. Add that URL as a story format to your copy of Twine 2; every time you re-build it and then hit the "play" button on your story, it should use the latest version of your code. 
+Running `npm start` will start the `watch.js` auto-compile behavior, and also start a local web server that serves the compiled `format.js` file. By default, this will be available at `http://localhost:3000/format.js`. Add that URL as a story format to your copy of Twine 2; every time you re-build it and then hit the "play" button on your story, it should use the latest version of your code.
 
 Do note that this is easier if you're using the downloadable version of Twine 2, as running it from within your web browser is likely to cache the format.js file.
 

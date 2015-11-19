@@ -1,5 +1,3 @@
-#!/bin/bash/node
-
 var fs = require('fs')
 var Uglify = require('uglify-js')
 

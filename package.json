@@ -22,6 +22,7 @@
     "jsdom": "^7.0.2",
     "mocha": "^2.3.4",
     "mocha-jsdom": "^1.0.0",
-    "uglify-js": "^2.6.1"
+    "uglify-js": "^2.6.1",
+    "watch": "^0.16.0"
   }
 }
