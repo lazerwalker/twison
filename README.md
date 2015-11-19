@@ -21,7 +21,7 @@ Here's an example of its output:
 {
   "passages": [
     {
-      "text": "This is a passage that goes to [[No Where-&gt;nowhere]].\n\nor is to [[somewhere]]?\n\nHere's a [[third link]]\n\nClick [[me-&gt;someNode]]",
+      "text": "This is a passage that goes to [[No Where->nowhere]].\n\nor is to [[somewhere]]?\n\nHere's a [[third link]]\n\nClick [[me->someNode]]",
       "links": [
         {
           "name": "No Where",
