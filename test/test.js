@@ -12,14 +12,20 @@ describe("Converting to JSON", function() {
     var div = document.createElement('div');
     div.innerHTML = storyData;
     story = div.childNodes[0];
+    document.body.appendChild(story)
 
-    var expected = JSON.parse(fs.readFileSync("output.json", "utf-8"));
+    var output = document.createElement('div')
+    output.setAttribute('id', 'output')
+    document.body.appendChild(output)
+
+    var expected = fs.readFileSync("output.json", "utf-8");
 
     require('../src/twison.js');
 
-    var result = window.Twison.convertStory(story);
+    window.Twison.convert(story);
+    var result = document.getElementById('output').innerHTML;
 
-    expect(JSON.stringify(result)).to.equal(JSON.stringify(expected));
+    expect(result).to.equal(expected);
 
   });
 });
