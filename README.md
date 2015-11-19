@@ -88,7 +88,7 @@ If you want to hack on Twison itself:
 
 ### Testing your changes locally
 
-Running `npm serve` will start a local web server that serves the compiled `format.js` file. By default, this will be available at `http://localhost:3000/format.js`. Add that URL as a story format to your copy of Twine 2; every time you re-build it and then hit the "play" button on your story, it should use the latest version of your code. 
+Running `npm start` will start a local web server that serves the compiled `format.js` file. By default, this will be available at `http://localhost:3000/format.js`. Add that URL as a story format to your copy of Twine 2; every time you re-build it and then hit the "play" button on your story, it should use the latest version of your code. 
 
 Do note that this is easier if you're using the downloadable version of Twine 2, as running it from within your web browser is likely to cache the format.js file.
 
