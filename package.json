@@ -4,7 +4,7 @@
   "description": "Export your Twine 2 story as a JSON document",
   "main": "format.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cd test && mocha test.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/lazerwalker/twison",
   "devDependencies": {
+    "chai": "^3.4.1",
+    "jsdom": "^7.0.2",
+    "mocha": "^2.3.4",
+    "mocha-jsdom": "^1.0.0",
     "uglify-js": "^2.6.1"
   }
 }

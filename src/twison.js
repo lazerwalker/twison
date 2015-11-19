@@ -1,4 +1,4 @@
-window.Twison = {
+var Twison = {
 	extractLinksFromText: function(text) {
     var links = text.match(/\[\[.+?\]\]/g)
     if (links) {
@@ -76,3 +76,5 @@ window.Twison = {
     document.getElementById("output").innerHTML = json;
   }
 }
+
+window.Twison = Twison;
