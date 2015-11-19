@@ -77,6 +77,9 @@ var Twison = {
       if (!passage.links) return;
       passage.links.forEach(function(link) {
         link.pid = pidsByName[link.link];
+        if (!link.pid) {
+          link.broken = true;
+        }
       });
     });
 

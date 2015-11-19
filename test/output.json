@@ -62,7 +62,8 @@
       "links": [
         {
           "name": "broken",
-          "link": "broken"
+          "link": "broken",
+          "broken": true
         }
       ],
       "name": "unattached",
