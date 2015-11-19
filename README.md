@@ -1,5 +1,7 @@
 # Twison
 
+[![Build Status](https://travis-ci.org/lazerwalker/twison.svg?branch=master)](https://travis-ci.org/lazerwalker/twison)
+
 Twison is a story format for [Twine 2](http://twinery.org/2) that simply exports to JSON.
 
 It is inspired by [http://www.maximumverbosity.net/twine/Entweedle/](Entweedle) as a model for how Twine 2 story formats work.
