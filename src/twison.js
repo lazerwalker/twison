@@ -70,9 +70,9 @@ window.Twison = {
     return dict;
   },
 
-	convert: function() {
-    var story = document.getElementsByTagName("tw-storydata")[0];
-    var convertedStory = Twison.convertStory(story);
-    return JSON.stringify(convertedStory, null, 2);
+  convert: function() {
+    var storyData = document.getElementsByTagName("tw-storydata")[0];
+    var json = JSON.stringify(Twison.convertStory(storyData), null, 2);
+    document.getElementById("output").innerHTML = json;
   }
 }
