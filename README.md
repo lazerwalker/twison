@@ -15,7 +15,7 @@ From within your story, set its story format to Twison. Choosing "Play" will now
 
 ## Output
 
-Here's an exampe of its output:
+Here's an example of its output:
 
 ```json
 {
@@ -84,7 +84,7 @@ If you want to hack on Twison itself:
 2. run `npm install` to install dependencies.
 3. Make your changes (the unminified code lives the `src` folder), and then run `node build.js` from the root project directory to compile it down to a Twine 2-compatible `format.js` file.
 
-I have yet to figure out a way to test out changes to your story format from within Twine 2 itself other than pushing your changes to a remote sever. If you can figure out how to serve Twine 2 the format.js file from your local hard drive, I'd love to hear it.
+I have yet to figure out a way to test out changes from within Twine 2 itself other than pushing your changes to a remote sever. If you can figure out how to serve Twine 2 the format.js file from your local hard drive, I'd love to hear it, but in the meanwhile the best workflow is probably pushing changes to your own GitHub fork and pointing Twine 2 at the appropriate raw GitHub URL (`http://github.com/YOUR_USERNAME/twison/raw/master/dist/format.js`). Because of how clunky this is, you may find the automated test suite (`npm test`) particularly useful.
 
 All contributions are welcome! If making code changes, please be sure to run the test suite (`npm test`) before opening a pull request.
 
