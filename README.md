@@ -81,10 +81,16 @@ It aims to maintain all fields provided in Twine's internal XML data, while augm
 If you want to hack on Twison itself:
 
 1. Clone this repo.
-2. run `npm install` to install dependencies.
-3. Make your changes (the unminified code lives the `src` folder), and then run `node build.js` from the root project directory to compile it down to a Twine 2-compatible `format.js` file.
+2. Run `npm install` to install dependencies.
+3. Make your changes to the unminified code in the `src` folder
+4. Run `node build.js` to compile your source into a `format.js` file that Twine 2 can understand.
 
-I have yet to figure out a way to test out changes from within Twine 2 itself other than pushing your changes to a remote sever. If you can figure out how to serve Twine 2 the format.js file from your local hard drive, I'd love to hear it, but in the meanwhile the best workflow is probably pushing changes to your own GitHub fork and pointing Twine 2 at the appropriate raw GitHub URL (`http://github.com/YOUR_USERNAME/twison/raw/master/dist/format.js`). Because of how clunky this is, you may find the automated test suite (`npm test`) particularly useful.
+
+### Testing your changes locally
+
+Running `npm serve` will start a local web server that serves the compiled `format.js` file. By default, this will be available at `http://localhost:3000/format.js`. Add that URL as a story format to your copy of Twine 2; every time you re-build it and then hit the "play" button on your story, it should use the latest version of your code. 
+
+Do note that this is easier if you're using the downloadable version of Twine 2, as running it from within your web browser is likely to cache the format.js file.
 
 All contributions are welcome! If making code changes, please be sure to run the test suite (`npm test`) before opening a pull request.
 

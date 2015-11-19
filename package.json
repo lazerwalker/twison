@@ -18,6 +18,7 @@
   "homepage": "https://github.com/lazerwalker/twison",
   "devDependencies": {
     "chai": "^3.4.1",
+    "express": "^4.13.3",
     "jsdom": "^7.0.2",
     "mocha": "^2.3.4",
     "mocha-jsdom": "^1.0.0",
