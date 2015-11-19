@@ -83,4 +83,4 @@ If you want to hack on Twison itself, clone this repo. The code itself lives in 
 
 ## License
 
-Twison is licensed under the MIT license. See the header located in src/twison.js.
+Twison is licensed under the MIT license. See the LICENSE file for more information.
