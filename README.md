@@ -18,45 +18,59 @@ From within your story, set its story format to Twison. Choosing "Play" will now
 Here's an exampe of its output:
 
 ```json
-[
-  {
-    "text": "This is a passage that goes to [[another node->first]].\n\nTHis one goes to to [[somewhere else]]?\n\nHere's a [[third link]]\n\nClick [[me->someNode]]",
-    "links": [
-      {
-        "name": "another node",
-        "link": "first"
+{
+  "passages": [
+    {
+      "text": "This is a passage that goes to [[No Where-&gt;nowhere]].\n\nor is to [[somewhere]]?\n\nHere's a [[third link]]\n\nClick [[me-&gt;someNode]]",
+      "links": [
+        {
+          "name": "No Where",
+          "link": "nowhere",
+          "pid": "3"
+        },
+        {
+          "name": "somewhere",
+          "link": "somewhere",
+          "pid": "2"
+        },
+        {
+          "name": "third link",
+          "link": "third link",
+          "pid": "4"
+        },
+        {
+          "name": "me",
+          "link": "someNode",
+          "pid": "5"
+        }
+      ],
+      "name": "First passage",
+      "pid": "1",
+      "position": {
+        "x": "553.3333333333334",
+        "y": "38.333333333333336"
       },
-      {
-        "name": "somewhere",
-        "link": "somewhere"
-      },
-      {
-        "name": "third link",
-        "link": "third link"
-      },
-      {
-        "name": "me",
-        "link": "someNode"
+      "tags": [
+        "tag",
+        "second-tag"
+      ]
+    },
+    {
+      "text": "You found me!",
+      "name": "somewhere",
+      "pid": "2",
+      "position": {
+        "x": "893.3333333333334",
+        "y": "241.66666666666669"
       }
-    ],
-    "name": "First passage",
-    "pid": "1",
-    "tags": ["tag"],
-    "position": {
-      "x": "553.3333333333334",
-      "y": "38.333333333333336"
     }
-  },
-  {
-    "text": "You found me!",
-    "name": "someNode",
-    "pid": "2",
-    "position": {
-      "x": "893.3333333333334",
-      "y": "241.66666666666669"
-    }
-  }
-]
+  ],
+  "name": "Test",
+  "startnode": "1",
+  "creator": "Twine",
+  "creator-version": "2.0.9",
+  "ifid": "1881C2BE-C764-4D33-ACC6-7BAEBB6D770A"
+}
 ```
 
 It aims to maintain all fields provided in Twine's internal XML data, while augmenting with other information where possible. For example, it doesn't touch a node's text contents, but it does parse links to provide a dictionary of links and destination nodes.
