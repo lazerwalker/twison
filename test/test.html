@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<title>Twison-Test</title>
+		<script type="text/javascript">
+/**
+ * Twison - Twine 2 JSON Export Story Format
+ * 
+ * Copyright (c) 2015 Mike Walker
+ * https://lazerwalker.com
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+ * associated documentation files (the "Software"), to deal in the Software without restriction,
+ * including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense,
+ * and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so,
+ * subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all copies or substantial
+ * portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+ * LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+ * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+ * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+var Twison={extractLinksFromText:function(t){var n=t.match(/\[\[.+?\]\]/g);return n?n.map(function(t){var n=t.match(/\[\[(.*?)\-\&gt;(.*?)\]\]/);return n?{name:n[1],link:n[2]}:(t=t.substring(2,t.length-2),{name:t,link:t})}):void 0},convertPassage:function(t){var n={text:t.innerHTML},a=Twison.extractLinksFromText(n.text);if(a&&(n.links=a),["name","pid","position","tags"].forEach(function(a){var e=t.attributes[a].value;e&&(n[a]=e)}),n.position){var e=n.position.split(",");n.position={x:e[0],y:e[1]}}return n.tags&&(n.tags=n.tags.split(" ")),n},convertStory:function(t){var n=t.getElementsByTagName("tw-passagedata"),a=Array.prototype.slice.call(n).map(Twison.convertPassage),e={passages:a};["name","startnode","creator","creator-version","ifid"].forEach(function(n){var a=t.attributes[n].value;a&&(e[n]=a)});var i={};return e.passages.forEach(function(t){i[t.name]=t.pid}),e.passages.forEach(function(t){t.links&&t.links.forEach(function(t){t.pid=i[t.link]})}),e},convert:function(){var t=document.getElementsByTagName("tw-storydata")[0],n=JSON.stringify(Twison.convertStory(t),null,2);document.getElementById("output").innerHTML=n}};window.Twison=Twison;		
+		</script>
+	</head>
+	<body>
+		<pre id="output">
+		
+		</pre>
+		<div id="storyData" style="display: none;">
+			<tw-storydata name="Twison-Test" startnode="1" creator="Twine" creator-version="2.0.9" ifid="94716246-402E-4E05-914B-532937C5EE88" format="Twison" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Start" tags="tag1 tag2" position="511,47">This is the first node.
+There is a [[second]] node, and a [[third-&gt;another]] node.</tw-passagedata>
+<tw-passagedata pid="2" name="second" tags="" position="328,197">Would you rather go to [[another]]?</tw-passagedata>
+<tw-passagedata pid="3" name="another" tags="" position="652,195">Would you rather go to [[second]]?</tw-passagedata>
+<tw-passagedata pid="4" name="unattached" tags="" position="893,116">I am unattached, and have a link that is [[broken]].</tw-passagedata>
+</tw-storydata>
+
+		</div>
+		<script>
+			Twison.convert()
+		</script>
+	</body>
+</html>
