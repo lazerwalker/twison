@@ -87,9 +87,10 @@ If you want to hack on Twison itself:
 
 ### Testing your changes locally
 
-Running `npm start` will start the `watch.js` auto-compile behavior, and also start a local web server that serves the compiled `format.js` file. By default, this will be available at `http://localhost:3000/format.js`. Add that URL as a story format to your copy of Twine 2; every time you re-build it and then hit the "play" button on your story, it should use the latest version of your code.
+Running `npm start` will start the `watch.js` auto-compile behavior, and also start a local web server that serves the compiled `format.js` file. By default, this will be available at `http://localhost:3000/format.js`. Add that URL as a story format to your copy of Twine 2; every time you save a source file and then re-generate the "Play" view of your story in Twine, it should use the latest version of your code.
 
-Do note that this is easier if you're using the downloadable version of Twine 2, as running it from within your web browser is likely to cache the format.js file.
+This is easier to do with the browser-based version of Twine 2 than with the downloadable copy, as you can just refresh your output page and it'll use the latest version of Twison.
+
 
 All contributions are welcome! If making code changes, please be sure to run the test suite (`npm test`) before opening a pull request.
 
