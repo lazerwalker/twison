@@ -8,7 +8,7 @@ It is inspired by [Entweedle](http://www.maximumverbosity.net/twine/Entweedle/) 
 
 ## Installation
 
-From the Twine 2 story select screen, add a story format, and point it to the url `http://github.com/lazerwalker/twison/raw/master/dist/format.js`.
+From the Twine 2 story select screen, add a story format, and point it to the url `http://lazerwalker.com/twison/format.js`.
 
 From within your story, set its story format to Twison. Choosing "Play" will now give you a JSON file.
 
