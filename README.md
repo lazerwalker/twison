@@ -82,7 +82,7 @@ The goal of Twison is to make it easy to use Twine as a frontend for forms of st
 
 The hope is that this will eventually take the form of some sort of module system that will make it easy for you to create an integration between Twine/Twison and your own engine. 
 
-In the meanwhile, if you want to see what a custom integration of Twison might look like with another IF tool, check out [Tinsel](http://maketinsel.com), a tool that allows you to write telephone-based IF games. Although you can use Tinsel by writing game scripts in its own format, you can also create Tinsel games in Twine, by means of the [Tinsel-Twison](https://github.com/lazerwalker/tinsel-twison) project. 
+In the meanwhile, if you want to see what a custom integration of Twison might look like with another IF tool, check out [Tinsel](http://www.maketinsel.com), a tool that allows you to write telephone-based IF games. Although you can use Tinsel by writing game scripts in its own format, you can also create Tinsel games in Twine, by means of the [Tinsel-Twison](https://github.com/lazerwalker/tinsel-twison) project. 
 
 
 ## Development
