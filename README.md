@@ -10,7 +10,7 @@ It is inspired by [Entweedle](http://www.maximumverbosity.net/twine/Entweedle/) 
 
 From the Twine 2 story select screen, add a story format, and point it to the url `http://lazerwalker.com/twison/format.js`.
 
-You may get an error that the story format could not be added; this appears to be a Twine 2 bug. If you continue, it should still work; open an issue in this repo's GitHub Issues if that's not the case.
+As this version of Twison is currently hosted from a non-secure `http` site, this means you'll either need to be using the downloadable version of Twine 2 or manually use the non-secure [http://twinery.org/2] version of Twine 2 rather than the HTTPS-encrypted version. I'm working on getting secure HTTPS hosting.
 
 From within your story, set the story format to Twison. Choosing "Play" will now give you a JSON file.
 
