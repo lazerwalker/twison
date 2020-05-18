@@ -72,11 +72,46 @@
         "x": "893",
         "y": "116"
       }
+    },
+    {
+      "text": "Here's a passage that contains a single prop.\n\n{{foo}}\n\nbar\n\n{{/foo}}",
+      "props": {
+        "foo": "bar"
+      },
+      "name": "Prop passage 1",
+      "pid": "5",
+      "position": {
+        "x": "425",
+        "y": "331"
+      }
+    },
+    {
+      "text": "Here's a passage that contains, {{foo}}bar{{/foo}} multiple props.\n\n{{foo2}}\nbar2\n{{/foo2}}\n\n{{foo3}}\n12345{{/foo3}}",
+      "props": {
+        "foo": "bar",
+        "foo2": "bar2",
+        "foo3": "12345"
+      },
+      "name": "Prop passage 2",
+      "pid": "6",
+      "position": {
+        "x": "586",
+        "y": "333"
+      }
+    },
+    {
+      "text": "} Here's a passage that has curly braces:{{/foo}} { , but no {{props}. }",
+      "name": "Non-prop passage",
+      "pid": "7",
+      "position": {
+        "x": "738",
+        "y": "333"
+      }
     }
   ],
   "name": "Twison-Test",
   "startnode": "1",
   "creator": "Twine",
-  "creator-version": "2.0.9",
+  "creator-version": "2.3.5",
   "ifid": "94716246-402E-4E05-914B-532937C5EE88"
 }
