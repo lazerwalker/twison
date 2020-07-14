@@ -43,6 +43,8 @@ var Twison = {
    * Extract the prop entities from the provided text.
    *
    * A provided {{foo}}bar{{/foo}} prop would yield an object of `{"foo": 'bar'}`.
+   * Nested props are supported by nesting multiple {{prop}}s within one
+   * another.
    *
    * @param {String} text
    *   The text to examine.
@@ -62,7 +64,18 @@ var Twison = {
 
       // Extract and sanitize the actual value.
       // This will remove any new lines.
-      props[key] = propMatch[3].replace(/(\r\n|\n|\r)/gm, '');
+      const value = propMatch[3].replace(/(\r\n|\n|\r)/gm, '');
+
+      // We can nest props like so: {{foo}}{{bar}}value{{/bar}}{{/foo}},
+      // so call this same method again to extract the values further.
+      const furtherExtraction = this.extractPropsFromText(value);
+
+      if (furtherExtraction !== null) {
+        props[key] = furtherExtraction;
+      } else {
+        props[key] = value;
+      }
+
       matchFound = true;
     }
 

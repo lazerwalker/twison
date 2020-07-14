@@ -100,7 +100,15 @@ As mentioned previously, in addition to Twison parsing the basic internal XML da
       "foo": "bar"
     },
   ```
-
+  * One can add "nested" props to create more complex objects. For instance, an example like "{{foo}}{{bar}}value{{/bar}}{{bar2}}value2{{/bar2}}{{/foo}}" would yield:
+  ```
+    "props": {
+      "foo": {
+      	"bar": "value",
+      	"bar2: "value2"
+      }
+    },
+  ```
 
 ## Development
 

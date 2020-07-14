@@ -86,11 +86,15 @@
       }
     },
     {
-      "text": "Here's a passage that contains, {{foo}}bar{{/foo}} multiple props.\n\n{{foo2}}\nbar2\n{{/foo2}}\n\n{{foo3}}\n12345{{/foo3}}",
+      "text": "Here's a passage that contains, {{foo}}bar{{/foo}} multiple props.\n\n{{foo2}}\nbar2\n{{/foo2}}\n\n{{foo3}}\n12345{{/foo3}}\n{{foo4}}\n{{test1}}\na_value\n{{/test1}}\n\n{{test2}}\nanother_value\n{{/test2}}\n\n{{/foo4}}",
       "props": {
         "foo": "bar",
         "foo2": "bar2",
-        "foo3": "12345"
+        "foo3": "12345",
+        "foo4": {
+          "test1": "a_value",
+          "test2": "another_value"
+        }
       },
       "name": "Prop passage 2",
       "pid": "6",
