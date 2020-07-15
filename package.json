@@ -4,7 +4,7 @@
   "description": "Export your Twine 2 story as a JSON document",
   "main": "format.js",
   "scripts": {
-    "test": "cd test && mocha test.js",
+    "test": "mocha test/test.js",
     "build": "node build.js",
     "start": "node server.js",
     "watch": "node watch.js"
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "https://github.com/lazerwalker/twison"
   },
-  "author": "Mike Lazer-Walker",
+  "author": "Em Lazer-Walker",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/lazerwalker/twison/issues"

@@ -6,7 +6,7 @@ var story;
 
 describe("Converting to JSON", function () {
   it("should generate the correct JSON", function () {
-    var storyData = fs.readFileSync("fixture.html", "utf-8");
+    var storyData = fs.readFileSync("./test/fixture.html", "utf-8");
     var div = document.createElement("div");
     div.innerHTML = storyData;
     story = div.childNodes[0];
@@ -16,7 +16,7 @@ describe("Converting to JSON", function () {
     output.setAttribute("id", "output");
     document.body.appendChild(output);
 
-    var expected = fs.readFileSync("output.json", "utf-8");
+    var expected = fs.readFileSync("./test/output.json", "utf-8");
 
     require("../src/twison.js");
 
