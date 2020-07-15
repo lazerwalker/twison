@@ -19,10 +19,12 @@
   "devDependencies": {
     "chai": "^3.4.1",
     "express": "^4.13.3",
-    "jsdom": "^7.0.2",
+    "jsdom": "^16.3.0",
     "mocha": "^2.3.4",
-    "mocha-jsdom": "^1.0.0",
     "uglify-js": "^2.6.1",
     "watch": "^0.16.0"
+  },
+  "dependencies": {
+    "jsdom-global": "^3.0.2"
   }
 }
