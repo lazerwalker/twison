@@ -1,6 +1,6 @@
 # Twison
 
-![Build Status](https://github.com/lazerwalker/twison/workflows/Build%20and%20Deploy%20to%20GH%20Pages/badge.svg)
+![Build Status](https://github.com/lazerwalker/twison/workflows/Build/badge.svg)
 
 Twison is a story format for [Twine 2](http://twinery.org/2) that simply exports to JSON.
 
