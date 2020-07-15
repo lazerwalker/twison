@@ -57,6 +57,9 @@ Here's an example of its output:
     },
     {
       "text": "You found me!",
+      "props": {
+        "foo": "bar"
+      },
       "name": "somewhere",
       "pid": "2",
       "position": {
@@ -68,13 +71,12 @@ Here's an example of its output:
   "name": "Test",
   "startnode": "1",
   "creator": "Twine",
-  "creator-version": "2.0.9",
+  "creator-version": "2.3.5",
   "ifid": "1881C2BE-C764-4D33-ACC6-7BAEBB6D770A"
 }
 ```
 
 It aims to maintain all fields provided in Twine's internal XML data, while augmenting with other information where possible. For example, it doesn't touch a node's text contents, but it does parse links to provide a dictionary of links and destination nodes.
-
 
 ## Interoperating with other systems
 
@@ -84,6 +86,29 @@ The hope is that this will eventually take the form of some sort of module syste
 
 In the meanwhile, if you want to see what a custom integration of Twison might look like with another IF tool, check out [Tinsel](http://www.maketinsel.com), a tool that allows you to write telephone-based IF games. Although you can use Tinsel by writing game scripts in its own format, you can also create Tinsel games in Twine, by means of the [Tinsel-Twison](https://github.com/lazerwalker/tinsel-twison) project. 
 
+
+## Capabilities
+
+As mentioned previously, in addition to Twison parsing the basic internal XML data, additional features have been baked in:
+
+1. Links
+  * [Links are available via the standard way of linking in Twine 2.](https://twinery.org/wiki/twine2:how_to_create_links) These will be extracted out into a `links` array on the relevant passage. 
+2. Props
+  * Props are available by adding them as so to the passage text: "{{foo}}bar{{/foo}}". Props are parsed from the passage text and added to a `props` object on the relevant passage. For instance, the previous example would yield the following addition to the passage:
+  ```
+    "props": {
+      "foo": "bar"
+    },
+  ```
+  * One can add "nested" props to create more complex objects. For instance, an example like "{{foo}}{{bar}}value{{/bar}}{{bar2}}value2{{/bar2}}{{/foo}}" would yield:
+  ```
+    "props": {
+      "foo": {
+      	"bar": "value",
+      	"bar2: "value2"
+      }
+    },
+  ```
 
 ## Development
 
