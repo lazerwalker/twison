@@ -4,7 +4,9 @@
   "description": "Export your Twine 2 story as a JSON document",
   "main": "format.js",
   "scripts": {
-    "test": "cd test && mocha test.js"
+    "test": "cd test && mocha test.js",
+    "build": "node build.js",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
